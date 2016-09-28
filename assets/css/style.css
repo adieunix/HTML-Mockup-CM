@@ -1,0 +1,58 @@
+@font-face {
+    font-family: "mireg";
+    src: url("../fonts/MyriadHebrew-Regular.otf");
+}
+@font-face {
+    font-family: "mibold";
+    src: url("../fonts/MyriadHebrew-Bold.otf");
+}
+@font-face {
+  font-family: "Flaticon";
+  src: url("../fonts/Flaticon.eot");
+  src: url("../fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/Flaticon.woff") format("woff"),
+       url("../fonts/Flaticon.ttf") format("truetype"),
+       url("../fonts/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+    font-family: Flaticon;
+    font-size: 20px;
+    font-style: normal;
+}
+
+.flaticon-batang:before { content: "\f100"; }
+.flaticon-cart:before { content: "\f101"; }
+.flaticon-currency:before { content: "\f102"; }
+.flaticon-delivery:before { content: "\f103"; }
+.flaticon-group:before { content: "\f104"; }
+.flaticon-hand:before { content: "\f105"; }
+.flaticon-history:before { content: "\f106"; }
+.flaticon-home:before { content: "\f107"; }
+.flaticon-key:before { content: "\f108"; }
+.flaticon-login:before { content: "\f109"; }
+.flaticon-navigation:before { content: "\f10a"; }
+.flaticon-notification:before { content: "\f10b"; }
+.flaticon-user:before { content: "\f10c"; }
+
+a,a:hover,button,span,
+body {
+    font-family: mireg;
+}
+.btn {
+    font-family: mibold;
+}
+.btn-warning:hover {
+    background-color: #f4cd00;
+    border-color: #d1b000;
+}

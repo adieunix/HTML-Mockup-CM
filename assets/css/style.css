@@ -24,6 +24,22 @@
   }
 }
 
+@media (min-width: 768px) {
+    .logo {
+        margin-top: 17px;
+    }
+}
+
+@media (max-width: 767px) {
+    .logo {
+        display: block;
+        margin: 10px auto;
+    }
+    .list-top {
+        text-align: center;
+    }
+}
+
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
     font-family: Flaticon;
@@ -55,4 +71,48 @@ body {
 .btn-warning:hover {
     background-color: #f4cd00;
     border-color: #d1b000;
+}
+.top-nav {
+    background: #252525;
+}
+.top-nav a {
+    color: #fff;
+    text-decoration: none;
+}
+.list-top {
+    margin: 0;
+    padding: 6px 0;
+    font-size: 13px;
+}
+.list-top li {
+    border-left: 1px solid #8e8e8e;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.list-inline>li:first-child {
+    border-left: none;
+}
+.list-inline>li:last-child {
+    padding-right: 0;
+}
+.header {
+    padding: 10px 15px;
+}
+.top-title {
+    font-size: 14px;
+    text-align: center;
+}
+.top-value {
+    border: 1px solid #888;
+    padding: 7px 10px 5px;
+    text-align: center;
+    background-color: #fff;
+}
+.plus {
+    font-size: 35px;
+    color: #252525;
+    cursor: pointer;
+}
+.zero-padding {
+    padding: 0;
 }

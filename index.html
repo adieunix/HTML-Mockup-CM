@@ -6,51 +6,149 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>CM</title>
         <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
-        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="assets/css/ionicons.min.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet">     
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/slideout.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                // Slideout Left
+                var slideoutLeft = new Slideout({
+                    'panel': document.getElementById('panel'),
+                    'menu': document.getElementById('left-menu'),
+                    'padding': 256,
+                    'tolerance': 70
+                });
+
+                // Toggle button
+                $('#left-nav').click(function() {
+                    $('#right-menu').addClass('hide');
+                    $('#left-menu').removeClass('hide');
+                    slideoutLeft.toggle();
+                });
+
+                // Slideout Right
+                var slideoutRight = new Slideout({
+                    'panel': document.getElementById('panel'),
+                    'menu': document.getElementById('right-menu'),
+                    'padding': 256,
+                    'tolerance': 70,
+                    'side': 'right'
+                });
+
+                // Toggle button
+                $('#right-nav').click(function() {
+                    $('#left-menu').addClass('hide');
+                    $('#right-menu').removeClass('hide');
+                    slideoutRight.toggle();
+                });
+
+            });
+        </script>
     </head>
     <body>
-        <header>
-            <div class="top-nav">
-                <div class="container">
-                    <ul class="list-inline text-right list-top">
-                        <li><a href="#">Beranda</a></li>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Register</a></li>
-                        <li><a href="#">Hubungi Kami</a></li>
-                    </ul>
-                </div>                
-            </div>
-            <div class="container header">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <a href="#">
-                            <img src="assets/img/logo.png" class="img-responsive logo">
-                        </a>
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="row">
-                            <div class="col-xs-6 col-sm-3 col-sm-offset-5">
-                                <div class="top-title text-center">
-                                    Saldo
-                                </div>
-                                <div class="top-value">Rp. 15,000,000</div>
+        <nav id="left-menu">
+            <ul class="list-unstyled list-left">
+                <li><a href="#">Order B2C</a></li>
+                <li><a href="#">Pasar</a></li>
+                <li><a href="#">Order History</a></li>
+                <li><a href="#">Kurs</a></li>
+                <li><a href="#">Top Up Saldo</a></li>
+                <li><a href="#">Pencairan Dana</a></li>
+            </ul>
+        </nav>
+        
+        <nav id="right-menu">
+            <ul class="list-unstyled list-right">
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Register</a></li>
+                <li><a href="#">Hubungi Kami</a></li>
+            </ul>
+        </nav>
+        
+        <section id="panel">
+            <header>
+                <div class="top-nav hidden-xs">
+                    <div class="container">
+                        <ul class="list-inline text-right list-top">
+                            <li><a href="#">Beranda</a></li>
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">Register</a></li>
+                            <li><a href="#">Hubungi Kami</a></li>
+                        </ul>
+                    </div>                
+                </div>
+                <div class="container header">
+                    <div class="row">
+                        <div class="col-sm-4 mob-top">
+                            <div class="left-menu visible-xs" id="left-nav">
+                                <i class="icon ion-navicon-round"></i>
                             </div>
-                            <div class="col-xs-1 zero-padding" style="padding-top:16px">
-                                <i class="icon ion-plus-circled plus"></i>
+                            <a href="#">
+                                <img src="assets/img/logo.png" class="img-responsive logo">
+                            </a>
+                            <div class="right-menu visible-xs" id="right-nav">
+                                <i class="icon ion-person"></i>
                             </div>
-                            <div class="col-xs-5 col-sm-3">
-                                <div class="top-title text-center">
-                                    Jumlah Emas
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-3 col-sm-offset-5">
+                                    <div class="top-title text-center">
+                                        Saldo
+                                    </div>
+                                    <div class="top-value">Rp. 15,000,000</div>
                                 </div>
-                                <div class="top-value">125 Gram</div>
+                                <div class="col-xs-1 zero-padding" style="padding-top:16px">
+                                    <i class="icon ion-plus-circled plus"></i>
+                                </div>
+                                <div class="col-xs-5 col-sm-3">
+                                    <div class="top-title text-center">
+                                        Jumlah Emas
+                                    </div>
+                                    <div class="top-value">125 Gram</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </header>
+
+            <div class="featured hidden-xs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <ul class="list-unstyled list-menu">
+                                <li><a href="#">Order B2C</a></li>
+                                <li><a href="#">Pasar</a></li>
+                                <li><a href="#">Order History</a></li>
+                                <li><a href="#">Kurs</a></li>
+                                <li><a href="#">Top Up Saldo</a></li>
+                                <li><a href="#">Pencairan Dana</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </header>
+            
+            <br><br><br>
+            
+            <footer>
+                <div class="top-nav">
+                    <div class="container">
+                        <ul class="list-inline text-center list-top">
+                            <li><a href="#">Tentang Coin Mas</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Syarat & Ketentuan</a></li>
+                            <li><a href="#">Kebijakan Privasi</a></li>
+                        </ul>
+                    </div>                
+                </div>
+            </footer>
+        </section>
+        
+        
     </body>
 </html>

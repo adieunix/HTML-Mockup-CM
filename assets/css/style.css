@@ -197,6 +197,10 @@ ul.list-right li a {
 #right-menu {
     background: #f9f9f9;
 }
+.nodata {
+    text-align: center;
+    padding: 50px 0;
+}
 
 /* Slidemenu */
 .slideout-menu {

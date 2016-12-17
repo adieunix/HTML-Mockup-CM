@@ -8,9 +8,15 @@
         <link href="assets/css/bootstrap.min.css" rel="stylesheet">
         <link href="assets/css/ionicons.min.css" rel="stylesheet">
         <link href="assets/css/style.css" rel="stylesheet">     
+        <script src="assets/js/angular.min.js"></script>
         <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/moment.min.js"></script>
+        <script src="assets/js/angular-moment.min.js"></script>
+        <script src="assets/js/Chart.min.js"></script>
+        <script src="assets/js/angular-chart.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/slideout.min.js"></script>
+        <script src="assets/js/app.js"></script>
         <script>
             $(document).ready(function() {
                 // Slideout Left
@@ -43,7 +49,6 @@
                     $('#right-menu').removeClass('hide');
                     slideoutRight.toggle();
                 });
-
             });
         </script>
     </head>
@@ -116,22 +121,30 @@
                 </div>
             </header>
 
-            <div class="featured hidden-xs">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <ul class="list-unstyled list-menu">
-                                <li><a href="#">Order B2C</a></li>
-                                <li><a href="#">Pasar</a></li>
-                                <li><a href="#">Order History</a></li>
-                                <li><a href="#">Kurs</a></li>
-                                <li><a href="#">Top Up Saldo</a></li>
-                                <li><a href="#">Pencairan Dana</a></li>
-                            </ul>
+            <div ng-app="coinApp" ng-controller="coinCtrl">
+                <div class="featured hidden-xs">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <ul class="list-unstyled list-menu">
+                                    <li><a href="#">Order B2C</a></li>
+                                    <li><a href="#">Pasar</a></li>
+                                    <li><a href="#">Order History</a></li>
+                                    <li><a href="#">Kurs</a></li>
+                                    <li><a href="#">Top Up Saldo</a></li>
+                                    <li><a href="#">Pencairan Dana</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                
+                <div class="container">
+                    <div class="nodata" ng-show="nodata">TIDAK ADA DATA CHART</div>
+                    <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-options="options" chart-colors="colors">
+                    </canvas>
+                </div>
+            </div>            
             
             <br><br><br>
             
@@ -148,7 +161,5 @@
                 </div>
             </footer>
         </section>
-        
-        
     </body>
 </html>

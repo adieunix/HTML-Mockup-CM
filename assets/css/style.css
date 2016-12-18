@@ -200,6 +200,56 @@ ul.list-right li a {
 .nodata {
     text-align: center;
     padding: 50px 0;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+.wrapper-item {
+    margin-top: 20px;
+}
+.box-item {
+    border: 1px solid #d8d8d8;
+}
+.item-desc {
+    position: relative;
+    background: rgba(255,255,255,0.9);
+    width: 100%;
+    margin-top: -82px;
+    padding: 3px 10px 1px;
+}
+.white-container {
+    background: #f4f4f4;
+}
+.wrapper-item a {
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+}
+.item-qty {
+}
+.item-price {
+    font-family: mibold;
+    margin-top: -4px;
+}
+.btn {
+    font-family: mibold;
+}
+.btn-item:hover {
+    font-family: mibold;
+}
+.btn-item {
+    margin-top: 5px;
+    width: 85px;
+    letter-spacing: 1px;
+    padding-top: 4px;
+    padding-bottom: 3px;
+    margin-bottom: 7px;
+}
+.col-item {
+    margin-bottom: 15px;
+    padding-left: 5px;
+    padding-bottom: 5px;
 }
 
 /* Slidemenu */

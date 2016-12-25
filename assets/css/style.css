@@ -220,6 +220,7 @@ ul.list-right li a {
 }
 .white-container {
     background: #f4f4f4;
+    padding-bottom: 50px;
 }
 .wrapper-item a {
     text-decoration: none;
@@ -250,6 +251,95 @@ ul.list-right li a {
     margin-bottom: 15px;
     padding-left: 5px;
     padding-bottom: 5px;
+}
+.no-title {
+    border-top: 1px solid #d4d4d4;
+    padding-top: 25px;
+}
+.list-title a {
+    display: block;
+    text-decoration: none;
+}
+.list-bank li {
+    margin-bottom: 30px;
+}
+.panel-group .panel+.panel {
+    margin-top: -1px;
+}
+.history-title {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 8px 0 3px;
+    font-weight: 600;
+}
+.tf-bank {
+    background: #fff;
+    padding: 20px 0;
+}
+.tf-value {
+    font-size: 20px;
+    font-family: mibold;
+    margin-left: 10px;
+}
+.green {
+    color: #00a651;
+}
+.red {
+    color: #a60000;
+}
+.black {
+    color: #000;
+}
+.arr {
+    position: relative;
+    float: right;
+    margin-top: 2px;
+}
+.ptop-10 {
+    padding-top: 10px;
+}
+.page-title {
+    text-align: center;
+    background: #ebebeb;
+    padding: 17px 0 15px;
+    border-top: 1px solid #d4d4d4;
+    margin-bottom: 25px;
+}
+.page-title span {
+    font-size: 20px;
+    margin-left: 10px;
+    letter-spacing: 2px;
+}
+.form-control {
+    height: 45px !important;
+}
+.btn-cm {
+    color: #000;
+    font-family: mibold;
+    height: 45px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.form-control:focus {
+    border-color: #e8c402;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.list-form li {
+    margin-bottom: 5px;
+}
+.list-form a {
+    color: #000;
+}
+@media (min-width: 768px) {
+    .form-horizontal .control-label {
+        text-align: right;
+        margin-bottom: 0;
+        padding-top: 7px;
+        margin-top: 9px;
+    }
 }
 
 /* Slidemenu */
